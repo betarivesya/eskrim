@@ -3,7 +3,7 @@ require_once '../config/Database.php';
 require_once '../classes/Auth.php';
 
 $db = new Database();
-$auth = new Auth($db->connect()); 
+$auth = new Auth($db->getConnection()); 
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if ($auth->login($_POST['email'], $_POST['password'])) {

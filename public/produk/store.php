@@ -5,7 +5,7 @@ require_once '../../config/Database.php';
 require_once '../../classes/Produk.php';
 
 $db = new Database();
-$conn = $db->connect();
+$conn = $db->getConnection();
 
 $produk = new Produk($conn);
 

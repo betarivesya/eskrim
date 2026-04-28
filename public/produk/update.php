@@ -4,7 +4,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/config/Database.php';
 require_once $_SERVER['DOCUMENT_ROOT'] . '/classes/Produk.php';
 
 $db = new Database();
-$conn = $db->connect();
+$conn = $db->getConnection();
 
 $produk = new Produk($conn);
 
